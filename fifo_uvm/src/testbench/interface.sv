@@ -10,14 +10,14 @@ interface fifo_if (input bit clk );
   logic empty;
   
   clocking out_mon_if @(posedge clk);
-    default input #1 output #1;
+    default input #0 output #0;
     input data_out;
     input full;
     input empty;
   endclocking 
   
   clocking in_mon_if @ (posedge clk);
-    default input #1 output #1;
+    default input #0 output #0;
     input rst;
     input wr_cs;
     input rd_cs;
@@ -28,7 +28,7 @@ interface fifo_if (input bit clk );
    
    
   clocking drv_if @ (posedge clk);
-    default input #1 output #1;
+    default input #0 output #0;
     output rst;
     output wr_cs;
     output rd_cs;
@@ -37,15 +37,7 @@ interface fifo_if (input bit clk );
     output data_in;
    endclocking 
    
- //clocking ref_if @ (posedge clk);
-    //default input #1 output #1;
-   //// input rst;
-  //  input wr_cs;
-   // input rd_cs;
-   // input wr_en;
-   // input rd_en;
-  //  input data_in;
-  // endclocking 
+ 
    
    
   modport drv ( clocking drv_if);
