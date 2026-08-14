@@ -36,9 +36,10 @@ class fifo_driver extends uvm_driver #(trans);
         seq_item_port.get_next_item (req);
         drive (req);
         seq_item_port.item_done();
-      end
+	
+      
     end
-    
+   end 
   endtask
   
   task drive (trans drv2dut);
@@ -52,6 +53,7 @@ class fifo_driver extends uvm_driver #(trans);
         vif.drv_if.wr_en <= drv2dut.wr_en;
         vif.drv_if.rd_en <= drv2dut.rd_en;
         vif.drv_if.data_in <= drv2dut.data_in;
+ `uvm_info ("input_monitor", $sformatf("input_monitor : wr_cs=%d | wr_en =%d | rd_cs=%d | rd_en=%d | data_in =%d ",drv2dut.wr_cs ,drv2dut.wr_en , drv2dut.rd_cs , drv2dut.rd_en , drv2dut.data_in),UVM_NONE)
         
     end
   endtask
