@@ -1,0 +1,5 @@
+-html
+fifo_uvm_coverage.ucdb
+-htmldir
+covReport
+-details

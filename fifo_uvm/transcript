@@ -1,0 +1,17 @@
+# do run.do
+# QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 14:43:24 on Aug 14,2026
+# vlog -sv "+acc" "+cover" "+fcover" -l simulation.log fifo_dut.v ram_dp_ar_aw.v interface.sv fifo_package.sv fifo_top.sv 
+# -- Compiling module syn_fifo
+# -- Compiling module ram_dp_ar_aw
+# -- Compiling interface fifo_if
+# -- Compiling package fifo_package
+# ** Note: (vlog-2286) fifo_package.sv(2): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module fifo_top
+# -- Importing package fifo_package
+# 
+# Top level modules:
+# 	fifo_top
+# End time: 14:43:25 on Aug 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
